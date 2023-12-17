@@ -24,11 +24,12 @@ slug = "Blog"
         .fakeimg {
             background-color: #232D3F;
             width: 100%;
+            height: 270px;
         }
 
         /* Add a card effect for articles */
         .card {
-            background-color: #232D3F;
+            background-color: #2E353F;
             padding: 20px;
             margin-top: 20px;
         }
@@ -42,16 +43,9 @@ slug = "Blog"
 
         img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: contain;
-        }
-
-        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 800px) {
-            .leftcolumn, .rightcolumn {
-                width: 100%;
-                padding: 0;
-            }
+            margin-top: 10px;
         }
 
         /* Pagination styles */
@@ -85,7 +79,7 @@ slug = "Blog"
          style="cursor:pointer;">
         <h3>Security Vulnerability Scanning in CI/CD Pipelines</h3>
         <time datetime="2023-12-17" pubdate>Dec 17, 2023</time>
-        <div class="fakeimg" style="height:200px;"><img
+        <div class="fakeimg"><img
                 src="../posts/security-vulnerability-scanning-in-CICD-pipelines/devsecops-flow.jpg"></div>
         <p>A security vulnerability represents a system weakness that, if exploited, can lead to unauthorized access to
             confidential data, violate data integrity, or result in denial of service.
@@ -94,7 +88,7 @@ slug = "Blog"
             Automated scanning processes integrated into the CI/CD pipeline play a pivotal role in achieving this goal.
             Automating these scanning tasks enhances efficiency and ensures that potential vulnerabilities are detected
             and mitigated early in the development lifecycle, minimizing the risk of security breaches.
-            This approach is called DevSecOps... [Click for more]</p>
+            This approach is called DevSecOps... <i>[Click for more]</i></p>
     </div>
 
     <div class="card"
@@ -102,7 +96,7 @@ slug = "Blog"
          style="cursor:pointer;">
         <h3>Design Considerations to Develop a Robust System Against DDoS Attacks</h3>
         <time datetime="2023-12-03" pubdate>Dec 3, 2023</time>
-        <div class="fakeimg" style="height:200px;"><img
+        <div class="fakeimg"><img
                 src="../posts/design-considerations-to-develop-a-robust-system-against-DDoS-attacks/ddos.png"></div>
         <p>A DDoS (Distributed Denial of Service) attack aims to disrupt a service by flooding it with huge amounts of
             traffic, exhausting its resources.
@@ -113,7 +107,7 @@ slug = "Blog"
             the dynamic cyber threat landscape.
             Neglecting fundamental system design principles can expose a system to DDoS vulnerabilities.
             I’ve examined key design considerations to address this issue for software engineers in this blog post ...
-            [Click for more]</p>
+            <i>[Click for more]</i></p>
     </div>
 
     <div class="card"
@@ -121,12 +115,12 @@ slug = "Blog"
          style="cursor:pointer;">
         <h3>Git: Less commonly used but handy commands</h3>
         <time datetime="2023-10-07" pubdate>Oct 7, 2023</time>
-        <div class="fakeimg" style="height:200px;"><img
+        <div class="fakeimg"><img
                 src="../posts/git-less-commonly-used-but-handy-commands/git.png"></div>
         <p>Git is a daily tool for developers, offering a wide range of commands.
             This post doesn’t aim to introduce basic git commands or delve into its internals.
             Instead, it draws from my experience to highlight some handy yet less commonly used git commands.
-            Let’s make it short and begin ... [Click for more]</p>
+            Let’s make it short and begin ... <i>[Click for more]</i></p>
     </div>
 
     <div class="card"
@@ -134,7 +128,7 @@ slug = "Blog"
          style="cursor:pointer;">
         <h3>A Cryptographic Client Side State</h3>
         <time datetime="2023-01-20" pubdate="">Jan 20, 2023</time>
-        <div class="fakeimg" style="height:200px;"><img src="../posts/a-cryptographic-client-side-state/user-flow.png">
+        <div class="fakeimg"><img src="../posts/a-cryptographic-client-side-state/user-flow.png">
         </div>
         <p>In web applications, sometimes it is needed to exchange multiple messages between server and client to
             complete a user journey.
@@ -154,7 +148,7 @@ slug = "Blog"
         partial states and reclaim disk space.
         But there is another way to prevent this situation from the beginning. What if the partial state is maintained
         on the user side?
-        In this blog post, a cryptographic way is introduced to keep partial state on user side ... [Click for more]</p>
+        In this blog post, a cryptographic way is introduced to keep partial state on user side ... <i>[Click for more]</i></p>
     </div>
 
     <div class="card"
@@ -162,13 +156,13 @@ slug = "Blog"
          style="cursor:pointer;">
         <h3>Rate Limiter with Redis</h3>
         <time datetime="2023-01-06" pubdate="">Jan 6, 2023</time>
-        <div class="fakeimg" style="height:200px;"><img src="../posts/rate-limiter-with-redis/leaky-bucket.png"></div>
+        <div class="fakeimg"><img src="../posts/rate-limiter-with-redis/leaky-bucket.png"></div>
         <p>Rate Limiter, controls and limits the rate of requests to access an object or resource.
             This limitation is mostly represented by units like Requests Per Seconds (RPS) or Requests Per Minutes
             (RPM).
             The reason to use Rate Limiter is to maintain the resources available and prevent denial of service (DoS).
             One of the common algorithms to implement Rate Limiter is Leaky Bucket.
-            In this blog post, the Leaky Bucket is implemented based on Redis cache engine. ... [Click for more]</p>
+            In this blog post, the Leaky Bucket is implemented based on Redis cache engine. ... <i>[Click for more]</i></p>
     </div>
 
 </div>
