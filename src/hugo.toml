@@ -1,4 +1,4 @@
-baseurl = "http://www.example.com"
+baseurl = "https://pouyae.ir"
 title = "Pouya Esmaeili"
 theme = "hugo-coder"
 languagecode = "en"
@@ -27,7 +27,7 @@ style = "github-dark"
 
   enableTwemoji = true
 
-  colorScheme = "auto"
+  colorScheme = "dark"
   hidecolorschemetoggle = false
 
   # customCSS = ["css/custom.css"]
