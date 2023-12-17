@@ -1,6 +1,7 @@
 # PouyaEsmaeili.github.io
-My personal homepage
+My personal homepage served via Githubpages.
 
+Powered by Hugo.
 
 ### Build 
 ```hugo -s ./src -d ..```
