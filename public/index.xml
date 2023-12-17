@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pouya Esmaeili</title>
+    <link>http://www.example.com/</link>
+    <description>Recent content on Pouya Esmaeili</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://www.example.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/about/</guid>
+      <description>&lt;!DOCTYPE html&gt; Results-driven software engineer with over 7 years of experience in the software industry, specializing in product development, deployment, and maintenance. Proven track record of contributing to 8+ products. Adept at collaborating with cross-functional teams, including design, business, and product management, to achieve product objectives. I bring a diverse perspective, having worked in both startup and large corporate environments. Detail-oriented and self-motivated, I excel in dynamic settings, utilizing my expertise to navigate and overcome new challenges.</description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://www.example.com/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/blog/</guid>
+      <description>&lt;!DOCTYPE html&gt; Security Vulnerability Scanning in CI/CD Pipelines Dec 17, 2023 A security vulnerability represents a system weakness that, if exploited, can lead to unauthorized access to confidential data, violate data integrity, or result in denial of service. It is necessary to proactively identify and mitigate vulnerabilities prior to deployment into the production environment. Automated scanning processes integrated into the CI/CD pipeline play a pivotal role in achieving this goal.</description>
+    </item>
+    <item>
+      <title>Contact Me</title>
+      <link>http://www.example.com/contact-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/contact-me/</guid>
+      <description>&lt;!DOCTYPE html&gt; Social Media Email You can also reach out to me via email:&#xA;pouya.esmaeili.g [AT] gmail.com </description>
+    </item>
+    <item>
+      <title>Gallery</title>
+      <link>http://www.example.com/gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/gallery/</guid>
+      <description>&lt;!DOCTYPE html&gt; Dizab to Gesh-e Roodkhan. Working from home during Covid-19 pandemic. Soha Lake. The hiking route from Soha Lake to Laton Waterfall. Happy new year. </description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://www.example.com/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/projects/</guid>
+      <description>&lt;!DOCTYPE html&gt; 1. Snowflake ID generator in Go 2. Cryptographic client side state 3. Leaky Bucket rate limiter with Redis 4. gFuzz: A grpc fuzzer 5. Duman Newsletter My newsletter about AI in Farsi</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Blog · Pouya Esmaeili
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Pouya Esmaeili">
+<meta name="description" content="&lt;!DOCTYPE html&gt; Security Vulnerability Scanning in CI/CD Pipelines Dec 17, 2023 A security vulnerability represents a system weakness that, if exploited, can lead to unauthorized access to confidential data, violate data integrity, or result in denial of service. It is necessary to proactively identify and mitigate vulnerabilities prior to deployment into the production environment. Automated scanning processes integrated into the CI/CD pipeline play a pivotal role in achieving this goal.">
+<meta name="keywords" content="blog,developer,personal,software,AI">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Blog"/>
+<meta name="twitter:description" content="&lt;!DOCTYPE html&gt; Security Vulnerability Scanning in CI/CD Pipelines Dec 17, 2023 A security vulnerability represents a system weakness that, if exploited, can lead to unauthorized access to confidential data, violate data integrity, or result in denial of service. It is necessary to proactively identify and mitigate vulnerabilities prior to deployment into the production environment. Automated scanning processes integrated into the CI/CD pipeline play a pivotal role in achieving this goal."/>
+
+<meta property="og:title" content="Blog" />
+<meta property="og:description" content="&lt;!DOCTYPE html&gt; Security Vulnerability Scanning in CI/CD Pipelines Dec 17, 2023 A security vulnerability represents a system weakness that, if exploited, can lead to unauthorized access to confidential data, violate data integrity, or result in denial of service. It is necessary to proactively identify and mitigate vulnerabilities prior to deployment into the production environment. Automated scanning processes integrated into the CI/CD pipeline play a pivotal role in achieving this goal." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.example.com/blog/" /><meta property="article:section" content="" />
+
+
+
+
+
+
+
+<link rel="canonical" href="http://www.example.com/blog/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Pouya Esmaeili
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/gallery/">Gallery</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact-me/">Contact Me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://www.example.com/blog/">
+          Blog
+        </a>
+      </h1>
+    </header>
+
+    
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #232D3F;
+            width: 100%;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: #232D3F;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            color: #ffffff;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #232D3F;
+            border-radius: 5px;
+            margin: 0 4px;
+        }
+
+        .pagination a:hover {
+            background-color: #45a049;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/security-vulnerability-scanning-in-ci-cd-pipelines-75e566caee95', '_blank');"
+         style="cursor:pointer;">
+        <h3>Security Vulnerability Scanning in CI/CD Pipelines</h3>
+        <time datetime="2023-12-17" pubdate>Dec 17, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img
+                src="../posts/security-vulnerability-scanning-in-CICD-pipelines/devsecops-flow.jpg"></div>
+        <p>A security vulnerability represents a system weakness that, if exploited, can lead to unauthorized access to
+            confidential data, violate data integrity, or result in denial of service.
+            It is necessary to proactively identify and mitigate vulnerabilities prior to deployment into the production
+            environment.
+            Automated scanning processes integrated into the CI/CD pipeline play a pivotal role in achieving this goal.
+            Automating these scanning tasks enhances efficiency and ensures that potential vulnerabilities are detected
+            and mitigated early in the development lifecycle, minimizing the risk of security breaches.
+            This approach is called DevSecOps... [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/design-considerations-to-develop-a-robust-system-against-ddos-attacks-b62bf75a796f', '_blank');"
+         style="cursor:pointer;">
+        <h3>Design Considerations to Develop a Robust System Against DDoS Attacks</h3>
+        <time datetime="2023-12-03" pubdate>Dec 3, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img
+                src="../posts/design-considerations-to-develop-a-robust-system-against-DDoS-attacks/ddos.png"></div>
+        <p>A DDoS (Distributed Denial of Service) attack aims to disrupt a service by flooding it with huge amounts of
+            traffic, exhausting its resources.
+            DDoS attacks have the capability to overwhelm nearly any online service.
+            Despite advanced tools for detection and mitigation, DDoS attacks remain a persistent challenge, evolving
+            like a cat-and-mouse game.
+            While ML-based Intrusion Detection Systems (IDS) are effective, a comprehensive approach is crucial due to
+            the dynamic cyber threat landscape.
+            Neglecting fundamental system design principles can expose a system to DDoS vulnerabilities.
+            I’ve examined key design considerations to address this issue for software engineers in this blog post ...
+            [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/git-less-commonly-used-but-handy-commands-d189e0619f47', '_blank');"
+         style="cursor:pointer;">
+        <h3>Git: Less commonly used but handy commands</h3>
+        <time datetime="2023-10-07" pubdate>Oct 7, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img
+                src="../posts/git-less-commonly-used-but-handy-commands/git.png"></div>
+        <p>Git is a daily tool for developers, offering a wide range of commands.
+            This post doesn’t aim to introduce basic git commands or delve into its internals.
+            Instead, it draws from my experience to highlight some handy yet less commonly used git commands.
+            Let’s make it short and begin ... [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/a-cryptographic-client-side-user-state-dd6085100c73', '_blank');"
+         style="cursor:pointer;">
+        <h3>A Cryptographic Client Side State</h3>
+        <time datetime="2023-01-20" pubdate="">Jan 20, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img src="../posts/a-cryptographic-client-side-state/user-flow.png">
+        </div>
+        <p>In web applications, sometimes it is needed to exchange multiple messages between server and client to
+            complete a user journey.
+            For example, this is a popular flow in user phone number verification:
+        <ul>
+            <li>User enters phone number.</li>
+            <li>User gets verification code in SMS.</li>
+            <li>User enters received verification code.</li>
+            <li>Now, user’s phone number is verified.</li>
+        </ul>
+        In flows like above, it is required to maintain a state on the server to keep track of the user’s actions.
+        But for any reason, users may not continue and complete the flow.
+        Abandoned flow may leave partial state on the server.
+        Partial states take up disk space. Consuming resources on the server may make the system inaccessible from
+        legitimate users and make it vulnerable to denial of service (DoS) attack.
+        One primary solution to this issue is to increase the resources like disk space and set a periodic job to clean
+        partial states and reclaim disk space.
+        But there is another way to prevent this situation from the beginning. What if the partial state is maintained
+        on the user side?
+        In this blog post, a cryptographic way is introduced to keep partial state on user side ... [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/rate-limiter-with-redis-ac6913932bf5', '_blank');"
+         style="cursor:pointer;">
+        <h3>Rate Limiter with Redis</h3>
+        <time datetime="2023-01-06" pubdate="">Jan 6, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img src="../posts/rate-limiter-with-redis/leaky-bucket.png"></div>
+        <p>Rate Limiter, controls and limits the rate of requests to access an object or resource.
+            This limitation is mostly represented by units like Requests Per Seconds (RPS) or Requests Per Minutes
+            (RPM).
+            The reason to use Rate Limiter is to maintain the resources available and prevent denial of service (DoS).
+            One of the common algorithms to implement Rate Limiter is Leaky Bucket.
+            In this blog post, the Leaky Bucket is implemented based on Redis cache engine. ... [Click for more]</p>
+    </div>
+
+</div>
+
+<div class="pagination">
+    <a href="javascript:void(0);" onclick="previousPage()">&laquo; Prev</a>
+    <a href="javascript:void(0);" class="active" id="page1" onclick="goToPage(1)">1</a>
+    <!--    <a href="javascript:void(0);" id="page2" onclick="goToPage(2)">2</a>-->
+    <!--    <a href="javascript:void(0);" id="page3" onclick="goToPage(3)">3</a>-->
+    <a href="javascript:void(0);" onclick="nextPage()">Next &raquo;</a>
+</div>
+
+<script>
+    function goToPage(page) {
+        switch (page) {
+            case 1:
+                window.location.href = '';
+                break;
+            case 2:
+                window.location.href = 'page2.html';
+                break;
+            case 3:
+                window.location.href = 'page3.html';
+                break;
+            default:
+                break;
+        }
+    }
+
+    function nextPage() {
+        const activePage = document.querySelector('.pagination a.active');
+        if (activePage) {
+            const nextPage = activePage.nextElementSibling;
+            if (nextPage) {
+                const page = parseInt(nextPage.textContent);
+                goToPage(page);
+            }
+        }
+    }
+
+    function previousPage() {
+        const activePage = document.querySelector('.pagination a.active');
+        if (activePage) {
+            const prevPage = activePage.previousElementSibling;
+            if (prevPage) {
+                const page = parseInt(prevPage.textContent);
+                goToPage(page);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     Pouya Esmaeili 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,225 @@
++++
+title = "Blog"
+slug = "Blog"
++++
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #232D3F;
+            width: 100%;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: #232D3F;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            color: #ffffff;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #232D3F;
+            border-radius: 5px;
+            margin: 0 4px;
+        }
+
+        .pagination a:hover {
+            background-color: #45a049;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/security-vulnerability-scanning-in-ci-cd-pipelines-75e566caee95', '_blank');"
+         style="cursor:pointer;">
+        <h3>Security Vulnerability Scanning in CI/CD Pipelines</h3>
+        <time datetime="2023-12-17" pubdate>Dec 17, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img
+                src="../posts/security-vulnerability-scanning-in-CICD-pipelines/devsecops-flow.jpg"></div>
+        <p>A security vulnerability represents a system weakness that, if exploited, can lead to unauthorized access to
+            confidential data, violate data integrity, or result in denial of service.
+            It is necessary to proactively identify and mitigate vulnerabilities prior to deployment into the production
+            environment.
+            Automated scanning processes integrated into the CI/CD pipeline play a pivotal role in achieving this goal.
+            Automating these scanning tasks enhances efficiency and ensures that potential vulnerabilities are detected
+            and mitigated early in the development lifecycle, minimizing the risk of security breaches.
+            This approach is called DevSecOps... [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/design-considerations-to-develop-a-robust-system-against-ddos-attacks-b62bf75a796f', '_blank');"
+         style="cursor:pointer;">
+        <h3>Design Considerations to Develop a Robust System Against DDoS Attacks</h3>
+        <time datetime="2023-12-03" pubdate>Dec 3, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img
+                src="../posts/design-considerations-to-develop-a-robust-system-against-DDoS-attacks/ddos.png"></div>
+        <p>A DDoS (Distributed Denial of Service) attack aims to disrupt a service by flooding it with huge amounts of
+            traffic, exhausting its resources.
+            DDoS attacks have the capability to overwhelm nearly any online service.
+            Despite advanced tools for detection and mitigation, DDoS attacks remain a persistent challenge, evolving
+            like a cat-and-mouse game.
+            While ML-based Intrusion Detection Systems (IDS) are effective, a comprehensive approach is crucial due to
+            the dynamic cyber threat landscape.
+            Neglecting fundamental system design principles can expose a system to DDoS vulnerabilities.
+            I’ve examined key design considerations to address this issue for software engineers in this blog post ...
+            [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/git-less-commonly-used-but-handy-commands-d189e0619f47', '_blank');"
+         style="cursor:pointer;">
+        <h3>Git: Less commonly used but handy commands</h3>
+        <time datetime="2023-10-07" pubdate>Oct 7, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img
+                src="../posts/git-less-commonly-used-but-handy-commands/git.png"></div>
+        <p>Git is a daily tool for developers, offering a wide range of commands.
+            This post doesn’t aim to introduce basic git commands or delve into its internals.
+            Instead, it draws from my experience to highlight some handy yet less commonly used git commands.
+            Let’s make it short and begin ... [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/a-cryptographic-client-side-user-state-dd6085100c73', '_blank');"
+         style="cursor:pointer;">
+        <h3>A Cryptographic Client Side State</h3>
+        <time datetime="2023-01-20" pubdate="">Jan 20, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img src="../posts/a-cryptographic-client-side-state/user-flow.png">
+        </div>
+        <p>In web applications, sometimes it is needed to exchange multiple messages between server and client to
+            complete a user journey.
+            For example, this is a popular flow in user phone number verification:
+        <ul>
+            <li>User enters phone number.</li>
+            <li>User gets verification code in SMS.</li>
+            <li>User enters received verification code.</li>
+            <li>Now, user’s phone number is verified.</li>
+        </ul>
+        In flows like above, it is required to maintain a state on the server to keep track of the user’s actions.
+        But for any reason, users may not continue and complete the flow.
+        Abandoned flow may leave partial state on the server.
+        Partial states take up disk space. Consuming resources on the server may make the system inaccessible from
+        legitimate users and make it vulnerable to denial of service (DoS) attack.
+        One primary solution to this issue is to increase the resources like disk space and set a periodic job to clean
+        partial states and reclaim disk space.
+        But there is another way to prevent this situation from the beginning. What if the partial state is maintained
+        on the user side?
+        In this blog post, a cryptographic way is introduced to keep partial state on user side ... [Click for more]</p>
+    </div>
+
+    <div class="card"
+         onclick="window.open('https://medium.com/@pouya.esmaeili.g/rate-limiter-with-redis-ac6913932bf5', '_blank');"
+         style="cursor:pointer;">
+        <h3>Rate Limiter with Redis</h3>
+        <time datetime="2023-01-06" pubdate="">Jan 6, 2023</time>
+        <div class="fakeimg" style="height:200px;"><img src="../posts/rate-limiter-with-redis/leaky-bucket.png"></div>
+        <p>Rate Limiter, controls and limits the rate of requests to access an object or resource.
+            This limitation is mostly represented by units like Requests Per Seconds (RPS) or Requests Per Minutes
+            (RPM).
+            The reason to use Rate Limiter is to maintain the resources available and prevent denial of service (DoS).
+            One of the common algorithms to implement Rate Limiter is Leaky Bucket.
+            In this blog post, the Leaky Bucket is implemented based on Redis cache engine. ... [Click for more]</p>
+    </div>
+
+</div>
+
+<div class="pagination">
+    <a href="javascript:void(0);" onclick="previousPage()">&laquo; Prev</a>
+    <a href="javascript:void(0);" class="active" id="page1" onclick="goToPage(1)">1</a>
+    <!--    <a href="javascript:void(0);" id="page2" onclick="goToPage(2)">2</a>-->
+    <!--    <a href="javascript:void(0);" id="page3" onclick="goToPage(3)">3</a>-->
+    <a href="javascript:void(0);" onclick="nextPage()">Next &raquo;</a>
+</div>
+
+<script>
+    function goToPage(page) {
+        switch (page) {
+            case 1:
+                window.location.href = '';
+                break;
+            case 2:
+                window.location.href = 'page2.html';
+                break;
+            case 3:
+                window.location.href = 'page3.html';
+                break;
+            default:
+                break;
+        }
+    }
+
+    function nextPage() {
+        const activePage = document.querySelector('.pagination a.active');
+        if (activePage) {
+            const nextPage = activePage.nextElementSibling;
+            if (nextPage) {
+                const page = parseInt(nextPage.textContent);
+                goToPage(page);
+            }
+        }
+    }
+
+    function previousPage() {
+        const activePage = document.querySelector('.pagination a.active');
+        if (activePage) {
+            const prevPage = activePage.previousElementSibling;
+            if (prevPage) {
+                const page = parseInt(prevPage.textContent);
+                goToPage(page);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

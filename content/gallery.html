@@ -1,0 +1,107 @@
++++
+title = "Gallery"
+slug = "Gallery"
++++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            background-color: #232D3F;
+            margin: 5px;
+            border: 10px solid #232D3F;
+            float: left;
+            width: 100%; /* Initially, each gallery item takes the full width */
+        }
+
+        .gallery:hover {
+            border: 1px solid #777;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        @media (min-width: 600px) {
+            /* Adjust the width for larger screens, e.g., tablets */
+            .gallery {
+                width: 48%; /* Two items per row */
+            }
+        }
+
+        @media (min-width: 768px) {
+            /* Adjust the width for larger screens, e.g., small laptops */
+            .gallery {
+                width: 31.33%; /* Three items per row */
+            }
+        }
+
+        @media (min-width: 992px) {
+            /* Adjust the width for larger screens, e.g., standard laptops */
+            .gallery {
+                width: 23.5%; /* Four items per row */
+            }
+        }
+
+        @media (min-width: 1200px) {
+            /* Adjust the width for larger screens, e.g., desktops */
+            .gallery {
+                width: 18.5%; /* Five items per row */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery">
+    <a target="_blank" href="/images/pouya1.jpg">
+        <img src="/images/pouya1.jpg" alt="Cinque Terre">
+    </a>
+    <div class="desc">Dizab to Gesh-e Roodkhan.</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="/images/pouya2.jpg">
+        <img src="/images/pouya2.jpg" alt="Cinque Terre">
+    </a>
+    <div class="desc">Working from home during Covid-19 pandemic.</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="/images/pouya3.jpg">
+        <img src="/images/pouya3.jpg" alt="Cinque Terre">
+    </a>
+    <div class="desc">Soha Lake.</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="/images/pouya4.jpg">
+        <img src="/images/pouya4.jpg" alt="Cinque Terre">
+    </a>
+    <div class="desc">The hiking route from Soha Lake to Laton Waterfall.</div>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="/images/pouya5.jpg">
+        <img src="/images/pouya5.jpg" alt="Cinque Terre">
+    </a>
+    <div class="desc">Happy new year.</div>
+</div>
+
+</body>
+</html>
