@@ -62,14 +62,19 @@ style = "github-dark"
   weight = 4
   url = "https://medium.com/@pouya.esmaeili.g"
 [[params.social]]
+  name = "HugginFace"
+  icon = "fa fa-face-smiling-hands fa-2x"
+  weight = 5
+  url = "https://medium.com/@pouya.esmaeili.g"
+[[params.social]]
   name = "Gmail"
   icon = "fa  fa-envelope-o fa-2x"
-  weight = 5
+  weight = 6
   url = "mailto:pouya.esmaeili.g@gmail.com"
 [[params.social]]
   name = "Linktree"
   icon = "fa fa-external-link fa-2x"
-  weight = 6
+  weight = 7
   url = "https://linktr.ee/pouyae"
 
 # Menu links
